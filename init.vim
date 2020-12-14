@@ -13,9 +13,7 @@ Plug 'scrooloose/nerdcommenter'
 "Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'morhetz/gruvbox'
-Plug 'HerringtonDarkholme/yats.vim' " TS Syntax
 Plug 'joshdick/onedark.vim'
-Plug 'jiangmiao/auto-pairs'
 Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-fugitive'
 
@@ -46,6 +44,7 @@ set termguicolors
 set scrolloff=8
 set noshowmode
 set completeopt=menuone,noinsert,noselect
+set ttimeoutlen=100
 "set signcolumn=yes
 
 " Give more space for displaying messages.
@@ -53,7 +52,7 @@ set cmdheight=2
 
 " Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
 " delays and poor user experience.
-set updatetime=50
+set updatetime=200
 
 " Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
@@ -63,7 +62,7 @@ set signcolumn=yes
 
 set textwidth=120
 set colorcolumn=120
-highlight ColorColumn ctermbg=lightgrey guibg=grey
+highlight ColorColumn ctermbg=black guibg=black
 colorscheme onedark
 
 inoremap jk <ESC>
@@ -79,6 +78,18 @@ let g:NERDTreeWinSize=50
 " open NERDTree automatically
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * NERDTree 
+
+" coc config
+let g:coc_global_extensions = [
+  \ 'coc-snippets',
+  \ 'coc-pairs',
+  \ 'coc-tsserver',
+  \ 'coc-eslint', 
+  \ 'coc-prettier', 
+  \ 'coc-json', 
+  \ 'coc-java',
+  \ 'coc-go',
+  \ ]
 
 " ctrlp
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
