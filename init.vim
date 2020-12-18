@@ -1,21 +1,66 @@
 " Specify a directory for plugins
 call plug#begin('~/.vim/plugged')
+  " *** CODE
+  " Intellisense 
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  " TypeScript syntax
+  Plug 'HerringtonDarkholme/yats.vim'
+  " Rust support
+  Plug 'rust-lang/rust.vim'
+  " auto set indent settings
+  Plug 'tpope/vim-sleuth'
+  " Better Syntax Support
+  Plug 'sheerun/vim-polyglot'
 
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'scrooloose/nerdtree'
-"Plug 'tsony-tsonev/nerdtree-git-plugin'
-Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-Plug 'ryanoasis/vim-devicons'
-Plug 'airblade/vim-gitgutter'
-Plug 'ctrlpvim/ctrlp.vim' " fuzzy find files
-Plug 'scrooloose/nerdcommenter'
-"Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
-Plug 'christoomey/vim-tmux-navigator'
-Plug 'morhetz/gruvbox'
-Plug 'joshdick/onedark.vim'
-Plug 'vim-airline/vim-airline'
-Plug 'tpope/vim-fugitive'
+  " *** File tree + git
+  " File tree
+  Plug 'scrooloose/nerdtree'
+  " Show files that have been modified via git
+  Plug 'Xuyuanp/nerdtree-git-plugin'
+  " Syntax highlighting for nerdtree
+  Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+  " Show lines that have been changed via git
+  Plug 'airblade/vim-gitgutter'
+  " Git commands
+  Plug 'tpope/vim-fugitive'
+  Plug 'junegunn/gv.vim'
+
+  " Icons
+  Plug 'ryanoasis/vim-devicons'
+  Plug 'kyazdani42/nvim-web-devicons'
+
+  " *** Fuzzy finders
+  " fuzzy find files
+  Plug 'ctrlpvim/ctrlp.vim' 
+  " Another fuzzy finder
+  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+  Plug 'junegunn/fzf.vim'
+  Plug 'yuki-ycino/fzf-preview.vim', { 'branch': 'release', 'do': ':UpdateRemotePlugins' }
+
+  " ***MISC
+  " Comments
+  Plug 'scrooloose/nerdcommenter'
+  "Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+  " Tmux navigator
+  Plug 'christoomey/vim-tmux-navigator'
+  " File navigation UI
+  Plug 'vim-airline/vim-airline'
+  " Surround
+  Plug 'tpope/vim-surround'
+  Plug 'liuchengxu/vista.vim'
+  " Find and replace
+  Plug 'brooth/far.vim'
+  " Auto change html tags
+  Plug 'AndrewRadev/tagalong.vim'
+  " Hex colorizer 
+  Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
+
+  "***Themes
+  Plug 'morhetz/gruvbox'
+  Plug 'joshdick/onedark.vim'
+
+  " Debugging
+  Plug 'puremourning/vimspector'
 
 " Initialize plugin system
 call plug#end()
@@ -37,6 +82,7 @@ set nu
 set smartcase
 set noswapfile
 set nobackup
+set nowritebackup
 set undodir=~/.vim/undodir
 set undofile
 set incsearch
@@ -45,25 +91,25 @@ set scrolloff=8
 set noshowmode
 set completeopt=menuone,noinsert,noselect
 set ttimeoutlen=100
-"set signcolumn=yes
+set signcolumn=yes
+set splitbelow                          " Horizontal splits will automatically be below
+set splitright                          " Vertical splits will automatically be to the right
+set ruler
 
 " Give more space for displaying messages.
 set cmdheight=2
 
 " Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
 " delays and poor user experience.
-set updatetime=200
+set updatetime=100
 
 " Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
 
-" always show signcolumns
-set signcolumn=yes
-
 set textwidth=120
 set colorcolumn=120
-highlight ColorColumn ctermbg=black guibg=black
-colorscheme onedark
+highlight ColorColumn ctermbg=grey guibg=grey
+colorscheme gruvbox 
 
 inoremap jk <ESC>
 nmap <C-n> :NERDTreeToggle<CR>
