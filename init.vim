@@ -1,10 +1,10 @@
 " Specify a directory for plugins
 call plug#begin('~/.vim/plugged')
   " Neovim lsp plugins"
-  Plug 'neovim/nvim-lspconfig'
-  Plug 'nvim-lua/completion-nvim'
-  Plug 'tjdevries/nlua.nvim'
-  Plug 'tjdevries/lsp_extensions.nvim'
+  "Plug 'neovim/nvim-lspconfig'
+  "Plug 'nvim-lua/completion-nvim'
+  "Plug 'tjdevries/nlua.nvim'
+  "Plug 'tjdevries/lsp_extensions.nvim'
 
   " *** CODE
   " Intellisense 
