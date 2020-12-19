@@ -7,7 +7,23 @@
     "json",
     "javascriptreact",
     "typescript.tsx",
-    "graphql"
+    "graphql",
+    "css",
+    "html",
+    "python",
+    "java",
+    "yaml",
+    "rust",
+    "markdown",
+    "less",
+    "scss"
   ],
+  "suggest.languageSourcePriority": 99,
+  "coc.source.file.priority": 2,
+  "coc.source.around.priority": 3,
+  "coc.source.buffer.priority": 4,
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
   "clangd.path": "/Users/clapinig/.config/coc/extensions/coc-clangd-data/install/11.0.0/clangd_11.0.0/bin/clangd"
 }
