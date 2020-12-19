@@ -1,6 +1,7 @@
 " Specify a directory for plugins
 call plug#begin('~/.vim/plugged')
   " Neovim lsp plugins"
+  Plug 'prabirshrestha/vim-lsp'
   "Plug 'neovim/nvim-lspconfig'
   "Plug 'nvim-lua/completion-nvim'
   "Plug 'tjdevries/nlua.nvim'
