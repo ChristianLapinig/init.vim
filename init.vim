@@ -1,5 +1,11 @@
 " Specify a directory for plugins
 call plug#begin('~/.vim/plugged')
+  " Neovim lsp plugins"
+  Plug 'neovim/nvim-lspconfig'
+  Plug 'nvim-lua/completion-nvim'
+  Plug 'tjdevries/nlua.nvim'
+  Plug 'tjdevries/lsp_extensions.nvim'
+
   " *** CODE
   " Intellisense 
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -65,6 +71,7 @@ call plug#begin('~/.vim/plugged')
 " Initialize plugin system
 call plug#end()
 
+" General settings
 syntax on
 filetype plugin indent on
 
@@ -135,6 +142,14 @@ let g:coc_global_extensions = [
   \ 'coc-json', 
   \ 'coc-java',
   \ 'coc-go',
+  \ 'coc-css',
+  \ 'coc-cssmodules',
+  \ 'coc-docker',
+  \ 'coc-html',
+  \ 'coc-python',
+  \ 'coc-sql',
+  \ 'coc-yaml',
+  \ 'coc-actions',
   \ ]
 
 " ctrlp
