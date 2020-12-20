@@ -2,11 +2,11 @@
 call plug#begin('~/.vim/plugged')
   " Neovim lsp plugins for rust development
   "Plug 'prabirshrestha/vim-lsp'
-  Plug 'neovim/nvim-lsp'
-  Plug 'neovim/nvim-lspconfig'
-  Plug 'nvim-lua/completion-nvim'
-  Plug 'tjdevries/nlua.nvim'
-  Plug 'tjdevries/lsp_extensions.nvim'
+  "Plug 'neovim/nvim-lsp'
+  "Plug 'neovim/nvim-lspconfig'
+  "Plug 'nvim-lua/completion-nvim'
+  "Plug 'tjdevries/nlua.nvim'
+  "Plug 'tjdevries/lsp_extensions.nvim'
 
   " *** CODE
   " Intellisense 
@@ -154,6 +154,7 @@ let g:coc_global_extensions = [
   \ 'coc-sql',
   \ 'coc-yaml',
   \ 'coc-actions',
+  \ 'coc-rls'
   \ ]
 
 " ctrlp
