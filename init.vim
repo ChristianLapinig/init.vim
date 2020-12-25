@@ -160,6 +160,9 @@ let g:coc_global_extensions = [
 " ctrlp
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
+" .ejs syntax highlighting
+au BufNewFile,BufRead *.ejs set filetype=html
+
 " Highlight currently open buffer in NERDTree
 "autocmd BufEnter * call SyncTree()
 
