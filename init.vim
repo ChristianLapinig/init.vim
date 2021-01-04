@@ -64,6 +64,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'AndrewRadev/tagalong.vim'
   " Hex colorizer 
   Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
+  Plug 'kassio/neoterm'
 
   "***Themes
   Plug 'morhetz/gruvbox'
