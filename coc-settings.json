@@ -15,7 +15,8 @@
     "rust",
     "markdown",
     "less",
-    "scss"
+    "scss",
+    "flutter"
   ],
   "suggest.languageSourcePriority": 99,
   "coc.source.file.priority": 2,

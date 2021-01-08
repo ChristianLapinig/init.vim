@@ -21,6 +21,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'sheerun/vim-polyglot'
   " Golang
   Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+  " Dart 
+  Plug 'dart-lang/dart-vim-plugin'
 
   " *** File tree + git
   " File tree
@@ -155,11 +157,16 @@ let g:coc_global_extensions = [
   \ 'coc-sql',
   \ 'coc-yaml',
   \ 'coc-actions',
-  \ 'coc-rls'
+  \ 'coc-rls',
+  \ 'coc-flutter'
   \ ]
 
 " ctrlp
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+
+" neoterm
+let g:neoterm_size = '20'
+let g:neoterm_default_mod = 'botright'
 
 " .ejs syntax highlighting
 au BufNewFile,BufRead *.ejs set filetype=html
