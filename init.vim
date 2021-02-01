@@ -66,7 +66,10 @@ call plug#begin('~/.vim/plugged')
   Plug 'AndrewRadev/tagalong.vim'
   " Hex colorizer 
   Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
+  " VSCode like terminal
   Plug 'kassio/neoterm'
+  " Markdown preview
+  Plug 'iamcco/markdown-preview.nvim'
 
   "***Themes
   Plug 'morhetz/gruvbox'
@@ -96,7 +99,7 @@ set smartcase
 set noswapfile
 set nobackup
 set nowritebackup
-set undodir=~/.vim/undodir
+set undodir=~/.vim/undodir 
 set undofile
 set incsearch
 set termguicolors
